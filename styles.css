@@ -1,0 +1,276 @@
+:root {
+    --tamañogirarvertical: 400px;
+    --tamnogirarhorizontal: 45%;
+    --tamañotex: 50px;
+    --tamaño-p-t1-t2: 620px; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 350px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav1 {
+    height: 98px;
+}
+
+.contenedor-nav {
+    background: transparent;
+    display: flex;
+    width: 1303px;
+    height: 90px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5); 
+}
+
+.menu {
+    justify-content: center;                                   /* para centrar el texto */
+    display: flex;
+    width: 800px;
+    align-items: center;                               /* para centrar el texto verticalmente */ 
+}
+
+.menu a {
+    color: #0B2744;
+    padding: 0 30px;                                        /* este sirve para un espacio entre otro */
+    font-size: 20px;
+    text-decoration: none;                                  /* para quitar las lineas del texto */
+}
+
+.menu a:hover {
+    border-bottom: 5px solid #808080;
+    transition: 3s;
+}
+
+.icono {
+    width: 100px;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;                          /* para centrar una caja dentro de otro verlical mente */
+    align-items: center;
+    /*margin-left: auto;                                               /* para centrar la caja */
+    /*margin-right: auto;                                              /* para centrar la caja */
+}
+
+.contenedor1 {
+    display: flex;
+    height: 100%;
+}
+
+
+.imagen1 {
+    width: 890px;
+    height: 780px;
+    
+}
+
+.imagen1 img {
+    height: 750px;
+    width: 1300px;
+    object-fit: cover;                                             /* sirve para ajustar la imagen en el cuvo */
+}
+
+.textos1 { 
+    text-align: center;                                               /* para centrar textos horizontalmente */
+    font-size: 25px;                                                /* para aumentar el tamaño de la letra */ 
+}
+
+.textos1 h1{
+    width: 400px;
+    color: #0B2744;
+    position: relative;
+    /* height: 50px; */
+    /*line-height: 50px;                                            /* para centrar el textos verticalmente */
+    /* position: relative; */
+    /*left: 50px;                                                    /* para colocarlo hacia la derecha */
+    top: 530px;                                                       /* para colocarlo hacia abajo */
+    /*bottom: 15px;                                                           /* hacia la arriba */
+    /*right: 10px;                                                          /* hacia izquierda */
+}
+
+.textos1 h2 {
+    width: 300px;
+    position: relative;
+    left: 55px;
+    top: 550px;
+    line-height: 50px;
+    height: 50px;
+    background-color: #F98EAE;
+    color: aliceblue;
+    border-radius: 15px;
+}
+
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    height: 70px;
+}
+
+.tex {
+    font-weight: 15;                                  /* para colocar negrilla al texto con una clase al h6 */
+}
+
+.pa {
+    font-weight: 1000;            /* para colocar negrilla a un parrafo agregande span y llamandolo con una clase */
+}
+
+.bienvenida a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    width: var(--tamnogirarhorizontal);
+    height: var(--tamañogirarvertical);
+    margin: 70px;
+}
+
+.card .face {
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .9s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    background-color: #F98EAE;
+}
+
+.front h1{
+    width: 400px;
+    font-size: 35px;
+    margin: 3%;
+}
+
+.front h3 {
+    width: 480px;
+    font-size: 17px;
+    font-weight: 1;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #51AEFB;
+}
+
+.back h3 {
+    height: 200px;
+    width: 520px;
+    align-content: center;
+    font-size: 38px;
+    position: relative;
+    bottom: 30px;
+    /* margin: 2%; */
+}
+
+.back p {
+    position: relative;
+    bottom: 35px;
+    width: 500px;
+    font-size: 19px;
+}
+
+.Descubre {
+    font-weight: 50;
+}
+
+.link {
+    border-radius: 4px;
+    display: flex;
+    height: 45px;
+    width: 250px;
+    /* font-size: 15px; */
+    justify-content: center;                          /* para centrar una caja dentro de otro verlical mente */
+    align-items: center;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 1px;
+}
+
+.link i {
+    display: flex;
+    justify-content: center;
+}
+
+.link a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 3%;
+}
+
+.caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 0 1px 0 0;
+    font-size: 12px;
+    color: aliceblue;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: var(--tamnogirarhorizontal);
+    height: var(--tamañogirarvertical);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;                                        
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.link {
+    color: black;
+}
+
+.t1 {
+    width: 50px;
+    height: 25px;
+    background-color: aqua;
+    position: relative;
+    left: var(--tamaño-p-t1-t2);
+}
+
+.t1 a {
+    text-decoration: none;
+    color: #808080;
+}
+
+.t2{
+    position: relative;
+    left: var(--tamaño-p-t1-t2);
+}
+
+.parrafo1 {
+    background-color: #808080;
+    position: relative;
+    left: var(--tamaño-p-t1-t2);
+}
