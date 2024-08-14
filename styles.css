@@ -1,16 +1,11 @@
-:root {
-    --tamañogirarvertical: 400px;
-    --tamnogirarhorizontal: 45%;
-    --tamañotex: 50px;
-    --tamaño-p-t1-t2: 620px; 
+body {
+    font-family: "Montserrat", sans-serif;
 }
-
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "montserrat";
 }
 
 .logo {
@@ -24,34 +19,48 @@
     width: 100px;
 }
 
-.nav1 {
-    height: 98px;
+nav {
+    position: fixed;                             /* para que el menu se despliege con el rotor hacia abejo*/
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5); 
 }
 
-.contenedor-nav {
-    background: transparent;
+.nav1 {
+    background-color: aliceblue;
+    height: 80px;
+    color: var(--color-de-efecto);
+}
+
+.nav2 {
+    background: #fff;
+    height: 100px;
+    color: var(--color-de-efecto);
+    z-index: 1;                                           /* para colocar este cuadro sobre todos */
+}
+
+.contenedor-nav {    
     display: flex;
     width: 1303px;
     height: 90px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.5); 
+    height: inherit;
 }
 
 .menu {
     justify-content: center;                                   /* para centrar el texto */
     display: flex;
     width: 800px;
-    align-items: center;                               /* para centrar el texto verticalmente */ 
+    align-items: center;                                 /* para centrar el texto verticalmente */ 
 }
 
 .menu a {
-    color: #0B2744;
     padding: 0 30px;                                        /* este sirve para un espacio entre otro */
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;                                  /* para quitar las lineas del texto */
+    color: inherit;                            /* sirve para que haga el cambio de color con el efecto de js */
+    border-bottom: 5px solid transparent;          /* evita que el efecto de la line no actue con el texto */
 }
 
 .menu a:hover {
-    border-bottom: 5px solid #808080;
+    border-bottom: 5px solid var(--color-de-efecto);
     transition: 3s;
 }
 
@@ -83,34 +92,36 @@
     object-fit: cover;                                             /* sirve para ajustar la imagen en el cuvo */
 }
 
-.textos1 { 
+.textos1 {
+    font-family: "Anybody", sans-serif;
     text-align: center;                                               /* para centrar textos horizontalmente */
-    font-size: 25px;                                                /* para aumentar el tamaño de la letra */ 
+    font-size: 20px;                                                /* para aumentar el tamaño de la letra */ 
 }
 
 .textos1 h1{
     width: 400px;
-    color: #0B2744;
-    position: relative;
+    color: #F98EAE;
+    margin-top: 470px;                                                   /* envia el texto hacia abajo */
+    padding: 2%;
+    font-weight: 600;
     /* height: 50px; */
     /*line-height: 50px;                                            /* para centrar el textos verticalmente */
     /* position: relative; */
-    /*left: 50px;                                                    /* para colocarlo hacia la derecha */
-    top: 530px;                                                       /* para colocarlo hacia abajo */
+    /*left: 50px;                                                    /* para colocarlo hacia la derecha */                                                    /* para colocarlo hacia abajo */
     /*bottom: 15px;                                                           /* hacia la arriba */
     /*right: 10px;                                                          /* hacia izquierda */
 }
 
 .textos1 h2 {
     width: 300px;
-    position: relative;
-    left: 55px;
     top: 550px;
     line-height: 50px;
     height: 50px;
     background-color: #F98EAE;
     color: aliceblue;
     border-radius: 15px;
+    margin: auto;
+    font-weight: 400;                                                       /* centra los cuadros de textos */
 }
 
 .bienvenida {
@@ -126,7 +137,7 @@
 }
 
 .pa {
-    font-weight: 1000;            /* para colocar negrilla a un parrafo agregande span y llamandolo con una clase */
+    font-weight: 700;            /* para colocar negrilla a un parrafo agregande span y llamandolo con una clase */
 }
 
 .bienvenida a {
@@ -153,15 +164,16 @@
 }
 
 .front h1{
-    width: 400px;
-    font-size: 35px;
+    width: 450px;
+    font-size: 30px;
     margin: 3%;
+    font-weight: 480;
 }
 
 .front h3 {
-    width: 480px;
-    font-size: 17px;
-    font-weight: 1;
+    width: 499px;
+    font-size: 12px;
+    font-weight: 350;
 }
 
 .card .back {
@@ -173,7 +185,7 @@
     height: 200px;
     width: 520px;
     align-content: center;
-    font-size: 38px;
+    font-size: 30px;
     position: relative;
     bottom: 30px;
     /* margin: 2%; */
@@ -183,12 +195,14 @@
     position: relative;
     bottom: 35px;
     width: 500px;
-    font-size: 19px;
+    font-size: 14px;
 }
 
-.Descubre {
-    font-weight: 50;
+.Descubre h3{
+    font-weight: 25;
 }
+
+
 
 .link {
     border-radius: 4px;
@@ -196,7 +210,7 @@
     height: 45px;
     width: 250px;
     /* font-size: 15px; */
-    justify-content: center;                          /* para centrar una caja dentro de otro verlical mente */
+    justify-content: center;                          /* para centrar una caja dentro de otro verlicalmente */
     align-items: center;
     border-style: solid;
     border-color: aliceblue;
@@ -212,6 +226,13 @@
     color: aliceblue;
     text-decoration: none;
     padding: 3%;
+    font-size: 15px;
+}
+
+.link1 :hover {
+    background-color: #69CED3;
+    cursor: pointer;
+    transition: 1s;
 }
 
 .caja {
@@ -223,7 +244,6 @@
     border-style: solid;
     border-color: aliceblue;
     border-width: 0 1px 0 0;
-    font-size: 12px;
     color: aliceblue;
 }
 
@@ -251,26 +271,130 @@
     color: black;
 }
 
+.parrafo1 {
+    width: 600px;
+    float: right;    /* para enviar el texto a la derecha */
+    margin-top: -430px;
+    height: 380px;
+    font-size: 16.6px;
+    color: #898D93;
+}
+
+.parrafo01 {
+    width: 550px;
+    height: 100%;
+}
+
 .t1 {
-    width: 50px;
-    height: 25px;
-    background-color: aqua;
-    position: relative;
-    left: var(--tamaño-p-t1-t2);
+    height: var(--height-distancia);
+    line-height: var(--height-distancia);                 /* para centrar texto verticalmente tiene que ser igual al height del div*/
 }
 
 .t1 a {
     text-decoration: none;
-    color: #808080;
+    font-size: 17px;
+    color: #898989;
 }
 
-.t2{
+.t2 {
     position: relative;
-    left: var(--tamaño-p-t1-t2);
+    left: 3px;
+    height: 70px;
+    color: #51AEFB;
+    font-size: 28px;
+    font-weight: 500;
 }
 
-.parrafo1 {
-    background-color: #808080;
-    position: relative;
-    left: var(--tamaño-p-t1-t2);
+.pa2 {
+    height: var(--height-ditancia-tex);
+    line-height: var(--height-ditancia-tex);
+}
+
+.parrafo4 {
+    height: 300px;
+    display: flex;             /* paracentrar el div colocando en el pare verticalmente*/
+    align-items: center;       /* paracentrar el div colocando en el pare verticalmente*/
+}
+
+.parrafo04 {
+    display: flex;
+    height: 200px;
+    width: 1150px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background: linear-gradient(90deg,   /* esto es para colocarlo horizontalmente */
+        #57BDF2,
+        #2F8AE8,
+        #2F8AE8
+    );
+}
+
+.parrafo004 {
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parrafo401 {
+    width: 650px;
+    height: 100px;
+    font-size: 11px;
+}
+
+.ar1 {
+    color: var(--coloblanco);
+    height: 50%;
+    
+}
+
+.ar2 h3{
+    color: var(--coloblanco);
+    font-weight: 500;
+}
+
+.parrafo402 {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.parrafo403 {
+    background-color: #f34a7d;
+    font-size: 10px;
+    display: flex;
+    /*justify-content: space-between;     /* para colocar el div a la derecha */
+    width: 280px;
+    margin: auto;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: var(--Tamañolinea);
+    height: 45px;
+}
+
+.parrafo404 {
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 0 var(--Tamañolinea) 0 0;
+}
+
+.parrafo405 {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+:root {
+    --coloblanco: #fff;    /* linea 347,354 */
+    --tamañogirarvertical: 400px;     /* linea 159,264 */
+    --tamnogirarhorizontal: 45%;      /* line 158,263 */
+    --color-de-efecto: rgb(8, 153, 197);   /* linea 39,45,72 */
+    --height-distancia: 40px;    /* linea 289,290 */
+    --height-ditancia-tex: 50px;     /* linea 309,310 */
+    --Tamañolinea: 1px;      /* linea 374,385 */
 }
